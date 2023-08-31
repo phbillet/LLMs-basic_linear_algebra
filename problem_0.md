@@ -19,6 +19,8 @@ Bard returns by default 3 suggestions, let's see them:
 - sugestion 3:
 ![alt text](pictures/pb0_0s_bard_3.png)
 
+**Note:** the first suggestion is good, the other ones are a little bit less precise.
+
 ### GPT 3.5
 GPT returns only 1 suggestion, let's see it:
 ![alt text](pictures/pb0_0s_GPT.png)
@@ -37,6 +39,8 @@ Verify that the solution satisfies the problem.
 ![alt text](pictures/pb0_cot_bard_2.png)
 - sugestion 3:
 ![alt text](pictures/pb0_cot_bard_3.png)
+
+**Note:** the first suggestion is good, the other ones are too verbose.
 
 ### GPT 3.5
 ![alt text](pictures/pb0_cot_GPT.png)
@@ -62,6 +66,8 @@ What is the price of a kilogram of carrots?
 - sugestion 3:
 ![alt text](pictures/pb0_tot_bard_3.png)
 
+**Note:** the second suggestion is good, even if the LLM gives some unuseful elements, the other ones are too verbose and less precise.
+
 ### GPT 3.5
 ![alt text](pictures/pb0_tot_GPT.png)
 
@@ -79,6 +85,6 @@ What is the price of a kilogram of carrots?
 | problem solving |  OK    | OK  | OK  |  
 | result checking |  OK    | OK  | OK  | 
 
-**Note:**
+**Notes:**
 - since the initial problem is very simple, it's no surprise that both LLMs respond correctly, regardless of the technique used
 - Bard is much more verbose than GPT 3.5, which can sometimes be detrimental to the quality of the reasoning.
