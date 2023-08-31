@@ -24,9 +24,13 @@ Bard returns by default 3 suggestions, let's see them:
 ![alt text](pictures/pb1_0s_bard_3_1.png)
 ![alt text](pictures/pb1_0s_bard_3_2.png)
 
+**Note:** Bard transforms the text into equations, but gets lost in the calculations.
+
 ### GPT 3.5
 GPT returns only 1 suggestion, let's see it:
 ![alt text](pictures/pb1_0s_GPT.png)
+
+**Note:** GPT 3.5 transforms the text into equations, but the elimination of the variable is not optimal and there is an error in the verification.
 
 ## Chain-of-Thought prompting with verification of the solution
 The prompt is:
@@ -49,11 +53,19 @@ The prompt is:
 ![alt text](pictures/pb1_cot_bard_3_2.png)
 ![alt text](pictures/pb1_cot_bard_3_3.png)
 
+**Notes:** 
+- Bard transforms the text into equations, but gets lost in the calculations
+- the chain-of-thought technique hasn't helped at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb1_cot_GPT_2.png)
 #### Second try
 ![alt text](pictures/pb1_cot_GPT_1.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations, but gets lost in the calculations during the first try
+- during the second try, the chain-of-thought technique has helped, the reasoning is clearer.
 
 ## Tree of Thoughts prompting with verification of the solution
 The prompt is:
@@ -125,6 +137,6 @@ The prompt is:
 | problem solving |  OK    | OK  | OK  | KO     |  
 | result checking |  OK    | OK  | OK  | KO     | 
 
-**Note:**
+**Notes:**
 - GPT 3.5 offers better computing capacity than Bard, although a repeat request may be necessary
 - GPT 3.5 and Bard are capable of initialising the treatment of the problem using Cramer's rule, but unfortunately neither LLM is capable of carrying out the calculations.
