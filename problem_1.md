@@ -55,7 +55,7 @@ The prompt is:
 
 **Notes:** 
 - Bard transforms the text into equations, but gets lost in the calculations
-- the chain-of-thought technique hasn't helped at all.
+- the chain-of-thought technique hasn't helped Bard at all.
 
 ### GPT 3.5
 #### First try
@@ -65,7 +65,7 @@ The prompt is:
 
 **Notes:** 
 - GPT 3.5 transforms the text into equations, but gets lost in the calculations during the first try
-- during the second try, the chain-of-thought technique has helped, the reasoning is clearer.
+- during the second try, the chain-of-thought technique has helped GPT 3.5, the reasoning is clearer.
 
 ## Tree of Thoughts prompting with verification of the solution
 The prompt is:
@@ -91,11 +91,20 @@ Verify that the solution satisfies the problem.
 ![alt text](pictures/pb1_tot_bard_3_1.png)
 ![alt text](pictures/pb1_tot_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations, but gets lost in the calculations
+- Bard produces crazy reasonning
+- the tree-of-thought technique hasn't helped Bard at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb1_tot_GPT_1.png)
 #### Second try
 ![alt text](pictures/pb1_tot_GPT_2.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations, it finds the solution but gets lost during verification
+- the tree-of-thought technique has helped GPT 3.5 a little.
 
 ## Cramer's rule prompting with verification of the solution
 The prompt is:
@@ -104,7 +113,6 @@ The prompt is:
  What is the price of a kilogram of carrots and the price of a kilogram of bananas?  
  Solve the problem using Cramer's rule.  
  Verify that the solution satisfies the problem.
-
 
 ### Bard
 - sugestion 1:
@@ -117,11 +125,21 @@ The prompt is:
 ![alt text](pictures/pb1_crr_bard_3_1.png)
 ![alt text](pictures/pb1_crr_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations and applies correctly Cramer's rule (at least in suggestion 2)
+- Bard gets lost in all calculations
+- the Cramer's rule hasn't helped Bard at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb1_crr_GPT_1.png)
 #### Second try
 ![alt text](pictures/pb1_crr_GPT_2.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations, it finds the solution but gets lost during verification
+- GPT 3-5 is not really able to apply correctly the Cramer's rule
+- the Cramer's rule hasn't helped GPT 3.5 at all.
 
 ## Conclusion
 
@@ -136,6 +154,7 @@ The prompt is:
 | mathematization |  OK    | OK  | OK  | OK     |  
 | problem solving |  OK    | OK  | OK  | KO     |  
 | result checking |  OK    | OK  | OK  | KO     | 
+
 
 **Notes:**
 - GPT 3.5 offers better computing capacity than Bard, although a repeat request may be necessary
