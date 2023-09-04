@@ -23,9 +23,17 @@ Bard returns by default 3 suggestions, let's see them:
 ![alt text](pictures/pb2_0s_bard_3_1.png)
 ![alt text](pictures/pb2_0s_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations, but is not able to state that the equations are equivalent
+- Bard gets lost in the verification step.
+
 ### GPT 3.5
 GPT returns only 1 suggestion, let's see it:
 ![alt text](pictures/pb2_0s_GPT.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations and detects that the equations are equivalent
+- GPT 3.5 gets lost in the verification step.
 
 ## Chain-of-Thought prompting with verification of the solution
 The prompt is:
@@ -45,11 +53,19 @@ The prompt is:
 ![alt text](pictures/pb2_cot_bard_3_1.png)
 ![alt text](pictures/pb2_cot_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations, but is not able to state that the equations are equivalent
+- the chain-of-thought technique hasn't helped Bard at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb2_cot_GPT_1.png)
 #### Second try
 ![alt text](pictures/pb2_cot_GPT_2.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations and detects that there is an infinity of solution
+- during the second try, the chain-of-thought technique has helped GPT 3.5, the reasoning is clearer.
 
 ## Tree of Thoughts prompting with verification of the solution
 The prompt is:
@@ -64,7 +80,6 @@ Verify that the solution satisfies the problem.
  I bought 9 kilograms of carrots and 18 kilograms of bananas, I paid 36 euros.  
  What is the price of a kilogram of carrots and the price of a kilogram of bananas?  
 
-
 ### Bard
 - sugestion 1:
 ![alt text](pictures/pb2_tot_bard_1_1.png)
@@ -75,6 +90,11 @@ Verify that the solution satisfies the problem.
 - sugestion 3:
 ![alt text](pictures/pb2_tot_bard_3_1.png)
 ![alt text](pictures/pb2_tot_bard_3_2.png)
+
+**Notes:** 
+- Bard transforms the text into equations, but most of the time gets lost in the calculations
+- Bard produces crazy reasonning and sometimes an alomost good one - suggestion 2 
+- the tree-of-thought technique has helped Bard but just a little.
 
 ### GPT 3.5
 #### First try
