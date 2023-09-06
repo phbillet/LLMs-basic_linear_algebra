@@ -102,6 +102,11 @@ Verify that the solution satisfies the problem.
 #### Second try
 ![alt text](pictures/pb2_tot_GPT_2.png)
 
+**Notes:** 
+- GPT 3.5 transforms the text into equations, it finds the solution and properly concludes at least in the first suggestion
+- the second one is clearly less precise, asking a new suggestion to GPT 3.5 may help if the first one is not acceptable 
+- the tree-of-thought technique has helped GPT 3.5.
+
 ## Cramer's rule prompting with verification of the solution
 The prompt is:
 >I bought 3 kilograms of carrots and 6 kilograms of bananas, I paid 12 euros.  
@@ -109,7 +114,6 @@ I bought 9 kilograms of carrots and 18 kilograms of bananas, I paid 36 euros.
 What is the price of a kilogram of carrots and the price of a kilogram of bananas?  
 Solve the problem using Cramer's rule.  
 Verify that the solution satisfies the problem.  
-
 
 ### Bard
 - sugestion 1:
@@ -122,11 +126,21 @@ Verify that the solution satisfies the problem.
 ![alt text](pictures/pb2_crr_bard_3_1.png)
 ![alt text](pictures/pb2_crr_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations and applies correctly Cramer's rule (at least in suggestion 2)
+- Bard gets lost in all calculations
+- the Cramer's rule hasn't helped Bard at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb2_crr_GPT_1.png)
 #### Second try
 ![alt text](pictures/pb2_crr_GPT_2.png)
+**Notes:** 
+- GPT 3.5 transforms the text into equationsand applies the Cramer's rule, but gets lost in computation for the first try
+- the second try was better, but GPT 3-5 does not conclude correctly with Cramer's rule, and unfortunately proposes another solution 
+- the Cramer's rule hasn't really helped GPT 3.5.
+
 
 ## Conclusion
 
