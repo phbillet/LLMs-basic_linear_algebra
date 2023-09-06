@@ -21,9 +21,18 @@ Bard returns by default 3 suggestions, let's see them:
 - sugestion 3:
 ![alt text](pictures/pb3_0s_bard_3.png)
 
+**Notes:** 
+- Bard transforms the text into equations and finds that there is no solution
+- Although Bard detects that there is no solution, it does not stop and produces useless sentences
+- the first and the third Bard's suggestions are the same.
+
 ### GPT 3.5
 GPT returns only 1 suggestion, let's see it:
 ![alt text](pictures/pb3_0s_GPT_1.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations and finds that there is no solution
+- Although GPT 3.5 detects that there is no solution, it does not stop and produces useless sentences.
 
 ## Chain-of-Thought prompting with verification of the solution
 The prompt is:
@@ -43,8 +52,17 @@ The prompt is:
 - sugestion 3:
 ![alt text](pictures/pb3_cot_bard_3.png)
 
+**Notes:** 
+- Bard transforms the text into equations and finds that there is no solution
+- Although Bard detects that there is no solution, it does not stop and produces useless sentences
+- the first and the third Bard's suggestions are the same.
+
 ### GPT 3.5
 ![alt text](pictures/pb3_cot_GPT_1.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations and finds that there is no solution
+- Although GPT 3.5 detects that there is no solution, it does not stop and produces useless sentences.
 
 ## Tree of Thoughts prompting with verification of the solution
 The prompt is:
@@ -72,11 +90,21 @@ Verify that the solution satisfies the problem.
 ![alt text](pictures/pb3_tot_bard_3_1.png)
 ![alt text](pictures/pb3_tot_bard_3_2.png)
 
+**Notes:** 
+- Bard transforms the text into equations and gets lost in reasoning
+- the second suggestion of Bard is very interesting, the second expert finds that there is no solution, but the this suggestion is wrongly rejected
+- the tree-of-thought technique hasn't helped Bard at all.
+
 ### GPT 3.5
 #### First try
 ![alt text](pictures/pb2_cot_GPT_1.png)
 #### Second try
 ![alt text](pictures/pb2_cot_GPT_2.png)
+
+**Notes:** 
+- GPT 3.5 transforms the text into equations, it finds the solution and properly concludes at least in the second suggestion
+- the second one is false, because GPT 3.5, it gets lost in the comutations
+- the tree-of-thought technique has helped GPT 3.5 at least a little.
 
 ## Cramer's rule prompting with verification of the solution
 The prompt is:
@@ -98,6 +126,11 @@ Verify that the solution satisfies the problem.
 - sugestion 3:
 ![alt text](pictures/pb3_crr_bard_3_1.png)
 ![alt text](pictures/pb3_crr_bard_3_2.png)
+
+**Notes:** 
+- Bard transforms the text into equations and applies correctly Cramer's rule (at least in suggestion 2)
+- Bard gets lost in all calculations
+- the Cramer's rule hasn't helped Bard at all.
 
 ### GPT 3.5
 ![alt text](pictures/pb3_crr_GPT_1.png)
