@@ -4,28 +4,36 @@
 Are LLMs effective in solving a simple linear algebra system?
 
 The following problems will be used to assess LLMs:
-* Problem 0
+* **Problem 0**
 
    I bought 3 kilograms of carrots, I paid 12 euros.  
    What is the price of a kilogram of carrots?
+   
+   This problem has **a single solution**.
 
-* Problem 1
+* **Problem 1**
 
    I bought 3 kilograms of carrots and 6 kilograms of bananas, I paid 12 euros.  
    I bought 9 kilograms of carrots and 4 kilograms of bananas, I paid 24 euros.  
    What is the price of a kilogram of carrots and the price of a kilogram of bananas?
+   
+   This problem has **a single solution**.
 
-* Problem 2
+* **Problem 2**
 
    I bought 3 kilograms of carrots and 6 kilograms of bananas, I paid 12 euros.  
    I bought 9 kilograms of carrots and 18 kilograms of bananas, I paid 36 euros.  
    What is the price of a kilogram of carrots and the price of a kilogram of bananas?  
    
-* Problem 3
+   This problem has **an infinity of solutions**.
+   
+* **Problem 3**
 
    I bought 3 kilograms of carrots and 6 kilograms of bananas, I paid 12 euros.  
    I bought 9 kilograms of carrots and 18 kilograms of bananas, I paid 32 euros.  
    What is the price of a kilogram of carrots and the price of a kilogram of bananas?  
+   
+   This problem has **no solution**.
     
 For this experiment, the following LLMs will be used:
 * [Bard](https://bard.google.com/)
